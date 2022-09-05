@@ -1,4 +1,4 @@
-import { calculateTotal } from '../calculate.js';
+import calculateTotal from '../calculate';
 
 test('basic test', () => {
   const result = 4;
@@ -11,14 +11,14 @@ test('calculateTotal sum', () => {
       id: 456,
       name: 'Book1',
       count: 3,
-      price: 400
+      price: 400,
     },
     {
       id: 77,
       name: 'JavaSript',
       count: 1,
-      price: 1300
-    }
+      price: 1300,
+    },
   ];
 
   const result = calculateTotal(list);
@@ -31,16 +31,16 @@ test('calculateTotal sum with Discount', () => {
       id: 456,
       name: 'Book1',
       count: 3,
-      price: 401
+      price: 401,
     },
     {
       id: 77,
       name: 'JavaSript',
       count: 1,
-      price: 1300
-    }
+      price: 1300,
+    },
   ];
 
   const result = calculateTotal(list, true);
   expect(result).toBeCloseTo(2230.173);
-})
+});
